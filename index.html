@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Press Article Classifier</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+    
+<header>
+    <h1>Press Articles Classifier</h1>
+</header>
+<section class="import">
+    <div class="import-div" id="text_div" style="background-color: #D2E7FF;"><img src="images/texte.png" width="35px" height="35px" alt="img"><h4>Text</h4></div>
+    <div class="import-div" id="file_div"><img src="images/un-journal.png" width="35px" height="35px" alt="img"><h4>Import File <br>Word, Text</h4></div>
+    <div class="import-div" id="image_div"><img src="images/inserer-une-icone-dimage (1).png" width="35px" height="35px" alt="img"><h4>Image </h4></div>
+    <div class="import-div" id="URL_div"><img src="images/wwwb.png" width="35px" height="35px" alt="img"><h4>Paste Url</h4></div>
+</section>
+<body>
+
+    <div id="text_divMode" class="main">
+        <div id="conainer-div">
+            <textarea id="article" placeholder = "Write Or Paste Your Article Here "></textarea>
+            <button type='button' style=" color:white; background-color:#406EC7; height: 40px; width: 120px; border-radius: 5px; margin: 5px
+            "> Validate <img src="images/correct.png" width="15px" height="15px" alt="img" style="position: relative;left: 2px ; top: 2px;"></button> 
+            <div id="char-count" style="height: 30px; margin-right: auto; padding: 10px 0px 0px 5px;">0/10000</div>
+        </div>
+
+    
+        <div id="result_div">
+            <img src="images/piechart.png" height="50%" width="80%" style="align-self: center;">
+            
+            <div style="display: inline-flex; align-items: center; justify-content: center; margin: 40px;">
+                <img src="images/basket.png" alt="basket" style="height: 60px; width: 60px; margin-right: 30px;">
+                <span style="font-size: medium ">Sports</span>
+            </div>
+            
+
+            <div style="display: inline-flex; align-items: center; justify-content: center; position: relative; top: 15%;">
+                <img src="images/like.png" alt="like" style="height: 30px; width: 30px; ">
+                <hr style="margin: 25px;">
+                <img src="images/dislike.png" alt="dislike" style="height: 30px; width: 30px;">
+                <hr style="margin: 25px;">
+                <span style="font-size: medium ">Give Feedback</span>
+            </div>
+        </div>    
+    </div>
+
+
+
+
+
+
+    <div id="file_divMode" class="main" style="display: none;">
+        <div class="upload-container">
+            <div id="dropArea">Glissez et déposez vos fichiers ici</div>
+            <button id="uploadButton">Sélectionner un fichier</button>
+            <input type="file" id="fileInput" style="display: none;">
+            <input type="url" id="urlInput" placeholder="Entrez l'URL de l'article ou du journal">
+
+
+        <div id="progressBarContainer">
+                <div id="progressBar"></div>
+        </div>
+            <div id="fileList"></div>
+            <div id="fileSize"></div>
+            <button id="deleteButton" style="display: none;">Supprimer le fichier</button>
+        </div>
+
+        
+
+        <div id="result_div">
+            <img src="images/piechart.png" height="50%" width="80%" style="align-self: center;">
+            
+            <div style="display: inline-flex; align-items: center; justify-content: center; margin: 40px;">
+                <img src="images/basket.png" alt="basket" style="height: 60px; width: 60px; margin-right: 30px;">
+                <span style="font-size: medium ">Sports</span>
+            </div>
+            
+            <div style="display: inline-flex; align-items: center; position: relative; top: 10;">
+
+                <img src="images/like.png" alt="like" style="height: 30px; width: 30px; ">
+                <hr >
+                <img src="images/dislike.png" alt="dislike" style="height: 30px; width: 30px;">
+                <hr width="2px">
+                <span style="font-size: medium ">Give Feedback</span>
+            </div>
+        </div>    
+    </div>
+
+
+
+    <div id="image_divMode" class="main" style="display: none;">
+        <div id="conainer-div">
+            <textarea id="article" placeholder = "Drag or Upload your File "></textarea>
+            <button type='button' style=" color:white; background-color:#406EC7; height: 40px; width: 120px; border-radius: 5px; margin: 5px
+            "> Validate <img src="images/correct.png" width="15px" height="15px" alt="img" style="position: relative;left: 2px ; top: 2px;"></button> 
+        </div>
+        
+        <div id="result_div">
+            <img src="images/piechart.png" height="50%" width="80%" style="align-self: center;">
+            
+            <div style="display: inline-flex; align-items: center; justify-content: center; margin: 40px;">
+                <img src="images/basket.png" alt="basket" style="height: 60px; width: 60px; margin-right: 30px;">
+                <span style="font-size: medium ">Sports</span>
+            </div>
+
+            <div style="display: inline-flex; align-items: center; position: relative; top: 10;">
+
+                <img src="images/like.png" alt="like" style="height: 30px; width: 30px; ">
+                <hr >
+                <img src="images/dislike.png" alt="dislike" style="height: 30px; width: 30px;">
+                <hr width="2px">
+                <span style="font-size: medium ">Give Feedback</span>
+            </div>
+        </div>    
+    </div>  
+    </div>
+
+
+
+
+
+
+    <div id="URL_divMode" class="main" style="display: none;">
+        <div id="conainer-div">
+            <button type='button' style=" color:white; background-color:#406EC7; height: 40px; width: 40px; border-radius: 50%; margin: 3px 10px 0px 10px">
+            <img src="images/fleche-droite.png" width="12px" height="15px" alt="img" style="position: relative; left: 5%; top: 5%;"></button>
+            <input id="scrapingDiv" type="text" placeholder="Paste URL">
+            
+        </div>
+        <div id="result_div">
+            <img src="images/piechart.png" height="50%" width="80%" style="align-self: center;">
+            <div style="display: inline-flex; align-items: center; justify-content: center; margin: 40px;">
+                <img src="images/basket.png" alt="basket" style="height: 60px; width: 60px; margin-right: 30px;">
+                <span style="font-size: medium ">Sports</span>
+            </div>
+            
+
+            <div style="display: inline-flex; align-items: center; position: relative; top: 10;">
+                <img src="images/like.png" alt="like" style="height: 30px; width: 30px; ">
+                <hr >
+                <img src="images/dislike.png" alt="dislike" style="height: 30px; width: 30px;">
+                <hr width="2px">
+                <span style="font-size: medium ">Give Feedback</span>
+            </div>
+        </div>    
+    </div>
+</body>
+</html>
+<script src="script.js"></script>
